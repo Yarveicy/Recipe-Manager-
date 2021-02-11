@@ -1,12 +1,11 @@
 package model;
 
-import java.io.StringReader;
+
 import java.util.ArrayList;
 
-import com.sun.xml.internal.fastinfoset.util.StringArray;
 
-import java.util.Arrays;
-import java.util.Scanner;
+
+
 
 
 //Represent list of food

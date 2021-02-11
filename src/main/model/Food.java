@@ -1,6 +1,6 @@
 package model;
 
-import java.util.ArrayList;
+
 
 //Represent a food having an title, id, time required to cook, ingredients, coking instruction and recipe rating
 
