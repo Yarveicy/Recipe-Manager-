@@ -20,7 +20,7 @@ public class Food {
      * EFFECTS: title of food is set to title; food id is a  positive integer not assigned to any other food,
      *          ingredient of food is set to ingredients, time is a positive integer that assigned to time,
      *          food stars is a  positive integer rating of food that assigned to stars,ingredients of food is set
-     *          to ingredients, cookingInstruction is set to cooking Instruction
+     *          to ingredients, cookingInstruction is set to cooking Instruction for food
      */
 
     public Food(String title, int time, String ingredients, String cookingInstruction, int stars) {
