@@ -59,8 +59,25 @@ public class FoodListTest {
         testFoodlist2.addFood(pizza2);
         assertEquals(pizza1, testFoodlist2.getFood("Simple Pizza"));
         assertEquals(pizza2, testFoodlist2.getFood("Complicated Pizza"));
+        assertEquals(null, testFoodlist2.getFood("Not available"));
+
+        //assertArrayEquals(testFoodlist2.getFoodList(),testFoodlist2.getFoodList());
+    }
 
 
+    @Test
+    void testGetFoodList() {
+
+
+        FoodList testFoodlist2 = new FoodList();
+
+
+        testFoodlist2.addFood(pizza1);
+        testFoodlist2.addFood(pizza2);
+        ArrayList newVariable = testFoodlist2.getFoodList();
+        assertEquals(2, newVariable.size());
+        assertTrue(newVariable.contains(pizza1));
+        assertTrue(newVariable.contains(pizza2));
 
     }
 
