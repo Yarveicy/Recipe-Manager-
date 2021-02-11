@@ -32,6 +32,8 @@ public class FoodTest {
         assertEquals("Please add all the ingredients on the pizza topping. Then, put the pizza in the" +
                 "Oven", testFood.getCookingInstruction());
         assertEquals(3, testFood.getStars());
+
+
     }
 
     @Test
@@ -71,6 +73,13 @@ public class FoodTest {
     @Test
     void testGetId() {
         assertEquals(3, testFood.getId());
+
+    }
+
+    @Test
+    void testSetStars() {
+        testFood.setStars(5);
+        assertEquals(5, testFood.getStars());
 
     }
 
