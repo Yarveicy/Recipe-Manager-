@@ -67,4 +67,11 @@ public class FoodTest {
 
     }
 
+
+    @Test
+    void testGetId() {
+        assertEquals(3, testFood.getId());
+
+    }
+
 }

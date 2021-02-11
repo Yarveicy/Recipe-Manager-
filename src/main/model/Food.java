@@ -48,8 +48,6 @@ public class Food {
     }
 
 
-    //TODO: Test constructor
-    //TODO; Outcome shows title,time,ingredients, cooking instaruction and time required for the recipe
     public String getIngredients() {
 
         return ingredients;
