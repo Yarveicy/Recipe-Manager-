@@ -24,7 +24,7 @@ public class FoodTest {
     //TODO: Test constructor
     //TODO; Outcome shows title,time,ingredients, cooking instaruction and time required for the recipe
     @Test
-    void testConstructor() {
+    void testFood() {
         assertEquals("Simple Pizza", testFood.getTitle());
         assertEquals(35, testFood.getTime());
         assertEquals(" cheeze sausage mushroom bacon Pizza dough" +
@@ -34,5 +34,37 @@ public class FoodTest {
         assertEquals(3, testFood.getStars());
     }
 
+    @Test
+    void testGetTitle() {
+        assertEquals("Simple Pizza", testFood.getTitle());
+
+    }
+
+    @Test
+    void testGetTime() {
+        assertEquals(35, testFood.getTime());
+
+    }
+
+    @Test
+    void testGetIngredients() {
+        assertEquals(" cheeze sausage mushroom bacon Pizza dough" +
+                " salt", testFood.getIngredients());
+
+    }
+
+    @Test
+    void testGetCookingInstruction() {
+        assertEquals("Please add all the ingredients on the pizza topping. Then, put the pizza in the" +
+                "Oven", testFood.getCookingInstruction());
+
+    }
+
+
+    @Test
+    void testGetStars() {
+        assertEquals(3, testFood.getStars());
+
+    }
 
 }

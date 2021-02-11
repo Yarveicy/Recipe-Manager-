@@ -36,7 +36,7 @@ public class FoodListTest {
     //TODO: Test empty Arraylist
     //TODO; Outcome shows the array size 0
     @Test
-    void testAddFoodsEmptyList() {
+    void testFoodListAddFoodsEmptyList() {
 
 
         assertEquals(0, testFoodlist.size());
