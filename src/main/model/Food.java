@@ -29,6 +29,7 @@ public class Food {
         this.ingredients = ingredients;
         this.cookingInstruction = cookingInstruction;
         this.stars = stars;
+
     }
 
     public int getId() {
