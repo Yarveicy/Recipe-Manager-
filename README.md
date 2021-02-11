@@ -26,5 +26,16 @@ enjoy different foods.</p>
 - <h5>I would like to advance my programming skill. </h5>
 - <h5>I would like to help people to advance their cooking skills. </h5>
 
+<h3><strong><em>What are my user stories for phase1? </em></strong></h3>
+
+
+<p>As a user, I want to be able to add a  food recipe to my collection </p>
+<p>As a user, I want to be able to select a food recipe in my collection and view the recipe in detail</p>
+<p>As a user, I want to be able to select a food recipe and rate it on a scale of one to 10 stars</p>
+<p>As a user, I want to be able to select a recipe in my collection and view the recipe in detail.</p>
+<p>As a user, I want to be able to view a list of the titles of the food recipes in my collection</p>
+
+
+
 An example of text with **bold** and *italic* fonts.  Note that the IntelliJ markdown previewer doesn't seem to render 
 the bold and italic fonts correctly but they will appear correctly on GitHub.
