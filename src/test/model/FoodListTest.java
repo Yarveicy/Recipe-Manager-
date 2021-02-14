@@ -2,7 +2,6 @@ package model;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 
@@ -11,9 +10,6 @@ import java.util.ArrayList;
 //Represent a test for FoodList Class
 
 public class FoodListTest {
-
-    FoodList testFoodlist = new FoodList();
-    FoodList testFoodlist2 = new FoodList();
 
 
     Food pizza1 = new Food("Simple Pizza", 35, " cheeze sausage mushroom bacon Pizza dough" +
@@ -30,9 +26,6 @@ public class FoodListTest {
 
     @BeforeEach
     void runBefore() {
-        FoodList testFoodlist = new FoodList();
-        FoodList testFoodlist2 = new FoodList();
-
 
         Food pizza1 = new Food("Simple Pizza", 35, " cheeze sausage mushroom bacon Pizza dough" +
                 " salt",
@@ -48,8 +41,9 @@ public class FoodListTest {
 
     }
 
-    //TODO: Test empty Arraylist
-    //TODO; Outcome shows the array size 0
+
+    //TODO: Test foodlist and addfood
+    //TODO; Outcome shows added foods are added to the foodlist if they are available
     @Test
     void testFoodList() {
 
@@ -61,17 +55,14 @@ public class FoodListTest {
         assertEquals(pizza2, testFoodlist2.getFood("Complicated Pizza"));
         assertEquals(null, testFoodlist2.getFood("Not available"));
 
-        //assertArrayEquals(testFoodlist2.getFoodList(),testFoodlist2.getFoodList());
     }
 
-
+    //TODO: Test getffid and addfood
+    //TODO; Outcome shows added foods are in the list and arraylist size increases by adding food
     @Test
     void testGetFoodList() {
 
-
         FoodList testFoodlist2 = new FoodList();
-
-
         testFoodlist2.addFood(pizza1);
         testFoodlist2.addFood(pizza2);
         ArrayList newVariable = testFoodlist2.getFoodList();

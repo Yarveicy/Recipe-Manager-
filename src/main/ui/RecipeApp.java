@@ -4,19 +4,25 @@ import model.Food;
 import model.FoodList;
 
 import java.util.Scanner;
-import java.util.ArrayList;
-import java.util.Arrays;
+
 
 // Food recipe application
 public class RecipeApp {
 
+
+    /*
+     * EFFECTS: Constructor of a Recipe App
+     */
     public RecipeApp() {
         FoodList foodList = new FoodList();
         Scanner input = new Scanner(System.in);
         runApp(foodList, input);
     }
 
-    // EFFECTS: runs the recipe application based on the option
+    // Modify: Food and Foodlist
+    //Require :food title,ingredients,cookingInstruction have a non-zero length and time>0 min,and stars between 1-10
+    //food list have a non-zero length
+    // EFFECTS: runs the recipe application based on USER INPUT
     private void runApp(FoodList foodList, Scanner input) {
         boolean isExit = false;
         while (!isExit) {
@@ -43,7 +49,7 @@ public class RecipeApp {
         }
     }
 
-
+    // Require: The input number should be 1,2,3,4 or 5.
     // EFFECTS: prompt the option for user to guide them how to use application
     private void promptUserOptions() {
         System.out.println("Please choose one of the below options, Just please type the number between 1-5");
@@ -54,7 +60,8 @@ public class RecipeApp {
         System.out.println("5. Exit");
     }
 
-
+    //Require :food title,ingredients,cookingInstruction have a non-zero length and time>0 min,and stars between 1-10
+    //food list have a non-zero length
     // MODIFIES: this
     // EFFECTS: Ask user to add the desired food recipe in detail such as title,time,ingredients,cooking instruction and
     // rating
@@ -90,6 +97,7 @@ public class RecipeApp {
 
     }
 
+    //Require:food has a non-zero length
     // EFFECTS: user can see the title of all added food recipe
     public void viewTileOfAllRecipe(FoodList foods) {
 
@@ -99,12 +107,12 @@ public class RecipeApp {
 
     }
 
+
     // EFFECTS: user can see the detail of the desired recipe
     public void viewTheDetailOfRecipe(FoodList foods) {
         Scanner input = new Scanner(System.in);
         System.out.println("Please write the title of the recipe");
         String title = input.nextLine();
-
 
         Food food = foods.getFood(title);
         if (food != null) {
@@ -120,6 +128,7 @@ public class RecipeApp {
 
     }
 
+    //Require:food has a non-zero length and rating should be between 1 to 10
     // EFFECTS: user can rate the desired recipe
     public void setRating(FoodList foods) {
         Scanner input = new Scanner(System.in);

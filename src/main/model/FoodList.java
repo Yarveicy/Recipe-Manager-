@@ -1,11 +1,6 @@
 package model;
 
-
 import java.util.ArrayList;
-
-
-
-
 
 
 //Represent list of food
@@ -18,7 +13,7 @@ public class FoodList {
     /*
      * REQUIRES: food list have a non-zero length.
      *
-     * EFFECTS: title of food is set to foodList
+     * EFFECTS: Constructor of a new foodliist of food item, title of food is set to foodList
      */
     public FoodList() {
 
@@ -32,7 +27,7 @@ public class FoodList {
 
     /*
      * REQUIRES: food has a non-zero length.
-     *  Modify :
+     * Modify :this
      * EFFECTS: the food is added to the list of food
      */
 
@@ -45,7 +40,7 @@ public class FoodList {
     /*
      * REQUIRES: food title  has a non-zero length.
      *
-     * EFFECTS: the food  is get from list of food
+     * EFFECTS: the food  is get from list of food based on the food title
      */
 
     public Food getFood(String foodTitle) {
