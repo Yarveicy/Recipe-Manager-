@@ -1,5 +1,7 @@
 package model;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 
 //Represent a food having an title, id, time required to cook, ingredients, coking instruction and recipe rating
@@ -68,4 +70,18 @@ public class Food {
 
         this.stars = stars;
     }
+
+    public JSONObject toJson() {
+        JSONObject json = new JSONObject();
+        json.put("title", title);
+        json.put("time", time);
+        json.put("ingredients", ingredients);
+        json.put("cookingInstruction", cookingInstruction);
+        json.put("stars", stars);
+        return json;
+    }
 }
+
+
+
+

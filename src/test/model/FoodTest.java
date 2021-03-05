@@ -1,5 +1,6 @@
 package model;
 
+import org.json.JSONObject;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
@@ -85,7 +86,7 @@ public class FoodTest {
     //TODO; Outcome shows id for food
     @Test
     void testGetId() {
-        assertEquals(3, testFood.getId());
+        assertEquals(11, testFood.getId());
 
     }
 
@@ -97,5 +98,9 @@ public class FoodTest {
         assertEquals(5, testFood.getStars());
 
     }
+
+
+
+
 
 }

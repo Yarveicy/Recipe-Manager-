@@ -2,7 +2,11 @@ package ui;
 
 import model.Food;
 import model.FoodList;
+import persistence.JsonReader;
+import persistence.JsonWriter;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
 
 
@@ -10,20 +14,34 @@ import java.util.Scanner;
 public class RecipeApp {
 
 
+    private static final String JSON_STORE = "./data/workroom.json";
+    private FoodList foodList;
+    private JsonWriter jsonWriter;
+    private JsonReader jsonReader;
+
+
     /*
      * EFFECTS: Constructor of a Recipe App
      */
     public RecipeApp() {
-        FoodList foodList = new FoodList();
+        jsonWriter = new JsonWriter(JSON_STORE);
+        jsonReader = new JsonReader(JSON_STORE);
+        foodList = new FoodList();
         Scanner input = new Scanner(System.in);
-        runApp(foodList, input);
+        runApp(input);
+
+
+        //foodList = new FoodList("Alex's workroom");
+
+
     }
+
 
     // Modify: Food and Foodlist
     //Require :food title,ingredients,cookingInstruction have a non-zero length and time>0 min,and stars between 1-10
     //food list have a non-zero length
     // EFFECTS: runs the recipe application based on USER INPUT
-    private void runApp(FoodList foodList, Scanner input) {
+    private void runApp(Scanner input) {
         boolean isExit = false;
         while (!isExit) {
             promptUserOptions();
@@ -39,15 +57,66 @@ public class RecipeApp {
                 case 3:
                     viewTheDetailOfRecipe(foodList);
                     break;
-                case 4:
-                    setRating(foodList);
-                    break;
                 case 5:
-                    isExit = false;
+                    isExit = true;
                     break;
+                default:
+                    runAppsss(option);
             }
         }
     }
+
+
+    //                case 5:
+//                    isExit = true;
+//                    break;
+//                case 6:
+//                    loadFoodList();
+//                    break;
+//                case 7:
+//                    saveFoodList();
+//                    break;
+
+    private void runAppsss(int option) {
+
+
+        switch (option) {
+            case 4:
+                setRating(foodList);
+                break;
+            case 6:
+                loadFoodList();
+                break;
+            case 7:
+                saveFoodList();
+                break;
+        }
+    }
+
+
+//
+//    private void helperMethod() {
+//        promptUserOptions();
+//        int option = input.nextInt();
+//        input.nextLine();
+//        while (!isExit) {
+//
+//        case 4:
+//        setRating(foodList);
+//        break;
+//        case 5:
+//        isExit = true;
+//        break;
+//        case 6:
+//        loadFoodList();
+//        break;
+//        case 7:
+//        saveFoodList();
+//        break;
+//
+//
+//    }
+
 
     // Require: The input number should be 1,2,3,4 or 5.
     // EFFECTS: prompt the option for user to guide them how to use application
@@ -58,6 +127,8 @@ public class RecipeApp {
         System.out.println("3. View recipe detail");
         System.out.println("4. Rate a recipe");
         System.out.println("5. Exit");
+        System.out.println("6. Load");
+        System.out.println("7. Save");
     }
 
     //Require :food title,ingredients,cookingInstruction have a non-zero length and time>0 min,and stars between 1-10
@@ -142,6 +213,32 @@ public class RecipeApp {
         food.setStars(stars);
 
 
+    }
+
+
+    // EFFECTS: saves the workroom to file
+    private void saveFoodList() {
+
+
+        try {
+            jsonWriter.open();
+            jsonWriter.write(foodList);
+            jsonWriter.close();
+            System.out.println("Saved foodList to " + JSON_STORE);
+        } catch (FileNotFoundException e) {
+            System.out.println("Unable to write to file: " + JSON_STORE);
+        }
+    }
+
+    // MODIFIES: this
+    // EFFECTS: loads workroom from file
+    private void loadFoodList() {
+        try {
+            foodList = jsonReader.read();
+            System.out.println("Loaded foodlist from " + JSON_STORE);
+        } catch (IOException e) {
+            System.out.println("Unable to read from file: " + JSON_STORE);
+        }
     }
 
 

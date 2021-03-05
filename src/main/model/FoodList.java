@@ -1,5 +1,8 @@
 package model;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 
 
@@ -51,6 +54,24 @@ public class FoodList {
             }
         }
         return (index == -1) ? null : foodList.get(index);
+    }
+
+
+    public JSONObject toJson() {
+        JSONObject json = new JSONObject();
+        json.put("foodlist", foodsToJson());
+        return json;
+    }
+
+
+    private JSONArray foodsToJson() {
+        JSONArray jsonArray = new JSONArray();
+
+        for (Food t : foodList) {
+            jsonArray.put(t.toJson());
+        }
+
+        return jsonArray;
     }
 
 
