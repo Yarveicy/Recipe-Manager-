@@ -57,6 +57,11 @@ public class FoodList {
     }
 
 
+    /*
+     * Modify :this
+     * EFFECTS: converts  foodlist to JsonObject--(return Json object)-
+     * to help us save the data with the help up value pairs
+     */
     public JSONObject toJson() {
         JSONObject json = new JSONObject();
         json.put("foodlist", foodsToJson());
@@ -64,6 +69,9 @@ public class FoodList {
     }
 
 
+    /*
+     * EFFECTS: returns foodlist as JsonArray to help us save the data with the help up value pairs
+     */
     private JSONArray foodsToJson() {
         JSONArray jsonArray = new JSONArray();
 

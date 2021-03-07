@@ -10,6 +10,8 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+
+//Represent a test for JsonWriter
 public class JsonWriterTest {
 
 
@@ -74,9 +76,6 @@ public class JsonWriterTest {
             assertEquals(0, pizzza.getFoodList().size());
             assertTrue(pizzza.getFoodList().isEmpty());
 
-            ///assertEquals("My work room",  pizzza.getFood(pizzza));
-            ///assertEquals(0,  pizzza.numThingies());
-
 
         } catch (IOException e) {
             fail("Exception should not have been thrown");
@@ -130,7 +129,6 @@ public class JsonWriterTest {
             assertEquals(34, pizza2.getStars());
 
             assertEquals(2, foods.getFoodList().size());
-
 
 
 

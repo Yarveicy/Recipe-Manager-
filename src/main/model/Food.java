@@ -71,6 +71,13 @@ public class Food {
         this.stars = stars;
     }
 
+
+    /*
+     * Modifies: this
+     * EFFECTS: converts  title,time required to cook, ingredients, coking instruction and recipe rating
+     * to a JsonObject-(return Json object)- to help us save the data with the help of value pairs.
+     */
+
     public JSONObject toJson() {
         JSONObject json = new JSONObject();
         json.put("title", title);

@@ -34,6 +34,8 @@ enjoy different foods.</p>
 <p>As a user, <strong> I want to be able</strong> to select a food recipe and rate it on a scale of one to 10 stars</p>
 <p>As a user, <strong> I want to be able</strong> to select a recipe in my collection and view the recipe in detail.</p>
 <p>As a user, <strong> I want to be able</strong> to view a list of the titles of the food recipes in my collection</p>
+<p>As a user, <strong> I want to be able</strong> to to save my food recipe to file.</p>
+<p>As a user, <strong> I want to be able</strong> to load my food recipe from file </p>
 
 
 

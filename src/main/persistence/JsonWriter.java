@@ -8,6 +8,9 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 
+// Represents a writer that writes JSON representation of foods to file
+//CITATIONS: I used the code which is available on GITHUB of UBC JsonSerializationDemo with
+//minor changes that I have done to the source code
 public class JsonWriter {
 
     private static final int TAB = 4;
@@ -27,7 +30,7 @@ public class JsonWriter {
     }
 
     // MODIFIES: this
-    // EFFECTS: writes JSON representation of food to file
+    // EFFECTS: writes JSON representation of foodlist to file
     public void write(FoodList c) {
         JSONObject json = c.toJson();
         saveToFile(json.toString(TAB));
@@ -44,9 +47,6 @@ public class JsonWriter {
     private void saveToFile(String json) {
         writer.print(json);
     }
-
-
-
 
 
 }

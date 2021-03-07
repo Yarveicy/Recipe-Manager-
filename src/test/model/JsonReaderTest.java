@@ -10,24 +10,10 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+//Represent a test for JsonReader
 public class JsonReaderTest {
 
-    //    @BeforeEach
-//    void runBefore() {
-//
-//        Food pizza1 = new Food("Simple Pizza", 35, " cheeze sausage mushroom bacon Pizza dough" +
-//                " salt",
-//                "Please add all the ingredients on the pizza topping. Then, put the pizza in the" +
-//                        "Oven", 3);
-//
-//
-//        Food pizza2 = new Food("Complicated Pizza", 40, " cheeze sausage mushroom bacon Pizza dough" +
-//                " salt",
-//                "Please add all the ingredients on the pizza topping. Then, put the pizza in the" +
-//                        "Oven", 34);
-//
-//
-//    }
+
     @Test
     void testReaderNonExistentFile() {
         JsonReader reader = new JsonReader("./data/noSuchFile.json");
@@ -45,7 +31,6 @@ public class JsonReaderTest {
         try {
             FoodList wr = reader.read();
 
-            //assertEquals([], wr.getFoodList());
             assertTrue(wr.getFoodList().isEmpty());
 
 
