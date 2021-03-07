@@ -1,12 +1,10 @@
 package model;
 
-import org.junit.jupiter.api.BeforeEach;
+
+
 import org.junit.jupiter.api.Test;
-import persistence.JsonReader;
-import persistence.JsonWriter;
 
 import java.io.IOException;
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -59,11 +57,15 @@ public class JsonReaderTest {
             assertEquals("Simple Pizza", foods.getFood("Simple Pizza").getTitle());
             assertEquals("Please add all the ingredients on the pizza topping. Then, put the pizza in theOven"
                     , foods.getFood("Simple Pizza").getCookingInstruction());
-            assertEquals(" cheeze sausage mushroom bacon Pizza dough salt", foods.getFood("Simple Pizza").getIngredients());
+            assertEquals(" cheeze sausage mushroom bacon Pizza dough salt",
+                    foods.getFood("Simple Pizza").getIngredients());
+
             //assertEquals(1, foods.getFood("Simple Pizza").getId());
             foods.getFood("Simple Pizza").setStars(5);
-            assertEquals(5,foods.getFood("Simple Pizza").getStars());
+            assertEquals(5, foods.getFood("Simple Pizza").getStars());
             assertFalse(foods.toJson().isEmpty());
+
+
 
 
         } catch (IOException e) {
