@@ -14,6 +14,8 @@ import static org.junit.jupiter.api.Assertions.*;
 public class JsonReaderTest {
 
 
+    //TODO: Test Reader for not available file
+    //TODO; Outcome shows the file does not exist
     @Test
     void testReaderNonExistentFile() {
         JsonReader reader = new JsonReader("./data/noSuchFile.json");
@@ -25,6 +27,9 @@ public class JsonReaderTest {
         }
     }
 
+
+    //TODO: Test Reader for empty file
+    //TODO; Outcome shows the file is empty
     @Test
     void testReaderEmptyFoodList() {
         JsonReader reader = new JsonReader("./data/testReaderEmptyFoodList.json");
@@ -39,9 +44,10 @@ public class JsonReaderTest {
         }
     }
 
-
+    //TODO: Test Reader for general file
+    //TODO; Outcome shows the file is available
     @Test
-    void testReaderGeneralWorkRoom() {
+    void testReaderGeneralFoodlist() {
         JsonReader reader = new JsonReader("./data/testReaderGeneralFoodList.json");
         try {
 

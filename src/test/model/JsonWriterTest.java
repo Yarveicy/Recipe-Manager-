@@ -44,7 +44,8 @@ public class JsonWriterTest {
 
     }
 
-
+    //TODO: Test Writer for invalid file
+    //TODO; Outcome shows the file is not available to write
     @Test
     void testWriterInvalidFile() {
 
@@ -60,6 +61,8 @@ public class JsonWriterTest {
 
     }
 
+    //TODO: Test Writer for empty file
+    //TODO; Outcome shows the file is empty to write
     @Test
     void testWriterEmptyFoodList() {
 
@@ -84,6 +87,8 @@ public class JsonWriterTest {
 
     }
 
+    //TODO: Test Writer for general file
+    //TODO; Outcome shows the file is ready to wrtire and works perfectly
     @Test
     void testWriterGeneralFoodList() {
         try {
@@ -129,7 +134,6 @@ public class JsonWriterTest {
             assertEquals(34, pizza2.getStars());
 
             assertEquals(2, foods.getFoodList().size());
-
 
 
         } catch (IOException e) {

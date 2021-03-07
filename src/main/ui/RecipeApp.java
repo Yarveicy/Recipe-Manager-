@@ -11,6 +11,8 @@ import java.util.Scanner;
 
 
 // Food recipe application
+//CITATIONS: I used the code which is available on GITHUB of UBC JsonSerializationDemo with
+//minor changes that I have done to the source code for loadfoodlist and savefoodlist methods
 public class RecipeApp {
 
 
@@ -29,9 +31,6 @@ public class RecipeApp {
         foodList = new FoodList();
         Scanner input = new Scanner(System.in);
         runApp(input);
-
-
-        //foodList = new FoodList("Alex's workroom");
 
 
     }
@@ -67,16 +66,6 @@ public class RecipeApp {
     }
 
 
-    //                case 5:
-//                    isExit = true;
-//                    break;
-//                case 6:
-//                    loadFoodList();
-//                    break;
-//                case 7:
-//                    saveFoodList();
-//                    break;
-
     private void runAppsss(int option) {
 
 
@@ -94,34 +83,13 @@ public class RecipeApp {
     }
 
 
-//
-//    private void helperMethod() {
-//        promptUserOptions();
-//        int option = input.nextInt();
-//        input.nextLine();
-//        while (!isExit) {
-//
-//        case 4:
-//        setRating(foodList);
-//        break;
-//        case 5:
-//        isExit = true;
-//        break;
-//        case 6:
-//        loadFoodList();
-//        break;
-//        case 7:
-//        saveFoodList();
-//        break;
-//
-//
-//    }
+
 
 
     // Require: The input number should be 1,2,3,4 or 5.
     // EFFECTS: prompt the option for user to guide them how to use application
     private void promptUserOptions() {
-        System.out.println("Please choose one of the below options, Just please type the number between 1-5");
+        System.out.println("Please choose one of the below options, Just please type the number between 1-7");
         System.out.println("1. Add recipe");
         System.out.println("2. View all recipe");
         System.out.println("3. View recipe detail");
@@ -216,7 +184,7 @@ public class RecipeApp {
     }
 
 
-    // EFFECTS: saves the workroom to file
+    // EFFECTS: saves the foodlist to file
     private void saveFoodList() {
 
 
@@ -231,7 +199,7 @@ public class RecipeApp {
     }
 
     // MODIFIES: this
-    // EFFECTS: loads workroom from file
+    // EFFECTS: loads foodlist from file
     private void loadFoodList() {
         try {
             foodList = jsonReader.read();
