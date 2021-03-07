@@ -82,13 +82,7 @@ public class FoodTest {
 
     }
 
-    //TODO: Test getId
-    //TODO; Outcome shows id for food
-    @Test
-    void testGetId() {
-        assertEquals(11, testFood.getId());
 
-    }
 
     //TODO: Test setstars
     //TODO; Outcome shows rating for food
@@ -99,7 +93,13 @@ public class FoodTest {
 
     }
 
+    //TODO: Test toJson
+    //TODO; Outcome shows the toJson works properly
+    @Test
+    void testFoodsToJson() {
+        assertFalse(testFood.toJson().isEmpty());
 
+    }
 
 
 

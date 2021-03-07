@@ -54,6 +54,16 @@ public class JsonReaderTest {
             FoodList foods = reader.read();
             assertFalse(foods.getFoodList().isEmpty());
             assertEquals(2, foods.getFoodList().size());
+            assertEquals(35, foods.getFood("Simple Pizza").getTime());
+            assertEquals(3, foods.getFood("Simple Pizza").getStars());
+            assertEquals("Simple Pizza", foods.getFood("Simple Pizza").getTitle());
+            assertEquals("Please add all the ingredients on the pizza topping. Then, put the pizza in theOven"
+                    , foods.getFood("Simple Pizza").getCookingInstruction());
+            assertEquals(" cheeze sausage mushroom bacon Pizza dough salt", foods.getFood("Simple Pizza").getIngredients());
+            //assertEquals(1, foods.getFood("Simple Pizza").getId());
+            foods.getFood("Simple Pizza").setStars(5);
+            assertEquals(5,foods.getFood("Simple Pizza").getStars());
+            assertFalse(foods.toJson().isEmpty());
 
 
         } catch (IOException e) {

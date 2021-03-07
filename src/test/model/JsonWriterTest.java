@@ -121,7 +121,7 @@ public class JsonWriterTest {
             assertEquals("Simple Pizza", pizza1.getTitle());
             assertEquals(35, pizza1.getTime());
             assertEquals(40, pizza2.getTime());
-
+           // assertEquals(10,pizza2.getId());
             assertEquals(" cheeze sausage mushroom bacon Pizza dough" +
                     " salt", pizza2.getIngredients());
             assertEquals(" cheeze sausage mushroom bacon Pizza dough" +
@@ -134,6 +134,14 @@ public class JsonWriterTest {
             assertEquals(34, pizza2.getStars());
 
             assertEquals(2, foods.getFoodList().size());
+            assertEquals(34,foods.getFood("Complicated Pizza").getStars());
+
+          pizza1.setStars(5);
+          assertEquals(5,pizza1.getStars());
+
+          assertFalse(pizza1.toJson().isEmpty());
+          assertFalse(foods.toJson().isEmpty());
+
 
 
         } catch (IOException e) {
