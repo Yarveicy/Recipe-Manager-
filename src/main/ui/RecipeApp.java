@@ -25,12 +25,17 @@ public class RecipeApp {
     /*
      * EFFECTS: Constructor of a Recipe App
      */
-    public RecipeApp() {
-        jsonWriter = new JsonWriter(JSON_STORE);
-        jsonReader = new JsonReader(JSON_STORE);
-        foodList = new FoodList();
-        Scanner input = new Scanner(System.in);
-        runApp(input);
+    public RecipeApp() throws Exception {
+
+        try {
+            jsonWriter = new JsonWriter(JSON_STORE);
+            jsonReader = new JsonReader(JSON_STORE);
+            foodList = new FoodList();
+            Scanner input = new Scanner(System.in);
+            runApp(input);
+        } catch (Exception e) {
+            System.out.println("Please choose the correct option to use the Application!");
+        }
 
 
     }
@@ -40,7 +45,7 @@ public class RecipeApp {
     //Require :food title,ingredients,cookingInstruction have a non-zero length and time>0 min,and stars between 1-10
     //food list have a non-zero length
     // EFFECTS: runs the recipe application based on USER INPUT
-    private void runApp(Scanner input) {
+    private void runApp(Scanner input) throws Exception {
         boolean isExit = false;
         while (!isExit) {
             promptUserOptions();
@@ -66,7 +71,7 @@ public class RecipeApp {
     }
 
 
-    private void runAppsss(int option) {
+    private void runAppsss(int option) throws Exception {
 
 
         switch (option) {
@@ -83,20 +88,21 @@ public class RecipeApp {
     }
 
 
-
-
-
-    // Require: The input number should be 1,2,3,4 or 5.
+    // Require: The input number should be 1 to 7.
     // EFFECTS: prompt the option for user to guide them how to use application
-    private void promptUserOptions() {
-        System.out.println("Please choose one of the below options, Just please type the number between 1-7");
-        System.out.println("1. Add recipe");
-        System.out.println("2. View all recipe");
-        System.out.println("3. View recipe detail");
-        System.out.println("4. Rate a recipe");
-        System.out.println("5. Exit");
-        System.out.println("6. Load");
-        System.out.println("7. Save");
+    private void promptUserOptions() throws Exception {
+        try {
+            System.out.println("Please choose one of the below options, Just please type the number between 1-7");
+            System.out.println("1. Add recipe");
+            System.out.println("2. View all recipe");
+            System.out.println("3. View recipe detail");
+            System.out.println("4. Rate a recipe");
+            System.out.println("5. Exit");
+            System.out.println("6. Load");
+            System.out.println("7. Save");
+        } catch (Exception e) {
+            System.out.println("Please only choose number between 1 to 7");
+        }
     }
 
     //Require :food title,ingredients,cookingInstruction have a non-zero length and time>0 min,and stars between 1-10
@@ -104,35 +110,34 @@ public class RecipeApp {
     // MODIFIES: this
     // EFFECTS: Ask user to add the desired food recipe in detail such as title,time,ingredients,cooking instruction and
     // rating
-    private void addRecipePlease(FoodList foodList) {
+    private void addRecipePlease(FoodList foodList) throws Exception {
         String title;
         int time;
         String ingredients;
         String cookingInstruction;
         int stars;
+        try {
+            Scanner input = new Scanner(System.in);  //// Create a Scanner object
+            System.out.println("Please write the title of the recipe");
+            title = input.nextLine();
 
-        Scanner input = new Scanner(System.in);  //// Create a Scanner object
-        System.out.println("Please write the title of the recipe");
-        title = input.nextLine();
+            System.out.println("Please write the time required to cook the recipe in minutes");
+            time = input.nextInt();
+            input.nextLine();
 
-        System.out.println("Please write the time required to cook the recipe in minutes");
-        time = input.nextInt();
-        input.nextLine();
+            System.out.println("Please write the ingredients required to cook the recipe");
+            ingredients = input.nextLine();
 
-        System.out.println("Please write the ingredients required to cook the recipe");
-        ingredients = input.nextLine();
+            System.out.println("Please write the cooking instruction, and rate the recipe once you have done!");
+            cookingInstruction = input.nextLine();
 
-
-        System.out.println("Please write the cooking instruction");
-        cookingInstruction = input.nextLine();
-
-        System.out.println("Please rate this recipe from 1 to 10");
-        stars = input.nextInt();
-        input.nextLine();
-
-        Food newRecipe = new Food(title, time, ingredients, cookingInstruction, stars);
-        foodList.addFood(newRecipe);
-
+            stars = input.nextInt();
+            input.nextLine();
+            Food newRecipe = new Food(title, time, ingredients, cookingInstruction, stars);
+            foodList.addFood(newRecipe);
+        } catch (Exception e) {
+            System.out.println("Please follow the correct format of inputs (Time and rating should be in number!!)");
+        }
 
     }
 
@@ -167,18 +172,22 @@ public class RecipeApp {
 
     }
 
-    //Require:food has a non-zero length and rating should be between 1 to 10
+    //Require:food has a non-zero length
     // EFFECTS: user can rate the desired recipe
-    public void setRating(FoodList foods) {
-        Scanner input = new Scanner(System.in);
-        System.out.println("Please write the title of the recipe");
-        String title = input.nextLine();
-        Food food = foods.getFood(title);
-        System.out.println("Please write the rating of the recipe");
-        int stars = input.nextInt();
+    public void setRating(FoodList foods) throws Exception {
+        try {
+            Scanner input = new Scanner(System.in);
+            System.out.println("Please write the title of the recipe");
+            String title = input.nextLine();
+            Food food = foods.getFood(title);
+            System.out.println("Please write the rating of the recipe");
+            int stars = input.nextInt();
 
 
-        food.setStars(stars);
+            food.setStars(stars);
+        } catch (Exception e) {
+            System.out.println("Please follow the correct format of input! Rating is number");
+        }
 
 
     }

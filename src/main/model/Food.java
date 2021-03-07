@@ -16,7 +16,7 @@ public class Food {
     private int stars;                      // Recipe rating
 
     /*
-     * REQUIRES: food title,ingredients,cookingInstruction have a non-zero length and time>0 min,and stars between 1-10.
+     * REQUIRES: food title,ingredients,cookingInstruction have a non-zero length and time>0 min,and stars .
      *
      * EFFECTS:  Constructor of  new food ;title of food is set to title;
      *          food id is a  positive integer not assigned to any other food,
