@@ -1,5 +1,7 @@
-package model;
+package persistence;
 
+import model.Food;
+import model.FoodList;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import persistence.JsonReader;
