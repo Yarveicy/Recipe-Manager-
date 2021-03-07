@@ -162,7 +162,7 @@ public class RecipeApp {
         if (food != null) {
             System.out.println("Recipe title: " + food.getTitle());
             System.out.println("Recipe Cooking Instruction: " + food.getCookingInstruction());
-            System.out.println("Food Ingredient:" + food.getIngredients());
+            System.out.println("Food Ingredients:" + food.getIngredients());
             System.out.println("Time required to cook:" + food.getTime());
             System.out.println("Rating of the recipe:"  + food.getStars());
         } else {
