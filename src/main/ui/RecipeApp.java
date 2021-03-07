@@ -164,7 +164,7 @@ public class RecipeApp {
             System.out.println("Recipe Cooking Instruction: " + food.getCookingInstruction());
             System.out.println("Food Ingredient:" + food.getIngredients());
             System.out.println("Time required to cook:" + food.getTime());
-            System.out.println("Rating of the Recipe:"  + food.getStars());
+            System.out.println("Rating of the recipe:"  + food.getStars());
         } else {
             System.out.println("No such recipe");
         }
