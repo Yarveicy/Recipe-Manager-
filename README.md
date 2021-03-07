@@ -26,7 +26,7 @@ enjoy different foods.</p>
 - <h5>I would like to advance my programming skill. </h5>
 - <h5>I would like to help people to advance their cooking skills. </h5>
 
-<h3><strong><em>What are my user stories for phase1 and 2? </em></strong></h3>
+<h3><strong><em>What are my user stories for phase 1 ? </em></strong></h3>
 
 
 <p>As a user, <strong> I want to be able</strong> to add a  food recipe to my collection </p>
@@ -34,6 +34,8 @@ enjoy different foods.</p>
 <p>As a user, <strong> I want to be able</strong> to select a food recipe and rate it </p>
 <p>As a user, <strong> I want to be able</strong> to select a recipe in my collection and view the recipe in detail.</p>
 <p>As a user, <strong> I want to be able</strong> to view a list of the titles of the food recipes in my collection</p>
+
+<h3><strong><em>What are my user stories for phase two? </em></strong></h3>
 <p>As a user, <strong> I want to be able</strong> to to save my food recipe to file.</p>
 <p>As a user, <strong> I want to be able</strong> to load my food recipe from file </p>
 
