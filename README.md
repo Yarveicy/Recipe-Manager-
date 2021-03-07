@@ -26,7 +26,7 @@ enjoy different foods.</p>
 - <h5>I would like to advance my programming skill. </h5>
 - <h5>I would like to help people to advance their cooking skills. </h5>
 
-<h3><strong><em>What are my user stories for phase1? </em></strong></h3>
+<h3><strong><em>What are my user stories for phase1 and 2? </em></strong></h3>
 
 
 <p>As a user, <strong> I want to be able</strong> to add a  food recipe to my collection </p>
