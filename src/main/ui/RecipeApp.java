@@ -146,7 +146,7 @@ public class RecipeApp {
     public void viewTileOfAllRecipe(FoodList foods) {
 
         for (int i = 0; i < foods.getFoodList().size(); i++) {
-            System.out.println(foods.getFoodList().get(i).getTitle());
+            System.out.println("Recipe title: " + foods.getFoodList().get(i).getTitle());
         }
 
     }
@@ -161,10 +161,10 @@ public class RecipeApp {
         Food food = foods.getFood(title);
         if (food != null) {
             System.out.println("Recipe title: " + food.getTitle());
-            System.out.println(food.getCookingInstruction());
-            System.out.println(food.getIngredients());
-            System.out.println(food.getTime());
-            System.out.println(food.getStars());
+            System.out.println("Recipe Cooking Instruction: " + food.getCookingInstruction());
+            System.out.println("Food Ingredient:" + food.getIngredients());
+            System.out.println("Time required to cook:" + food.getTime());
+            System.out.println("Rating of the Recipe:"  + food.getStars());
         } else {
             System.out.println("No such recipe");
         }
