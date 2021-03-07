@@ -89,7 +89,7 @@ public class JsonWriterTest {
     }
 
     //TODO: Test Writer for general file
-    //TODO; Outcome shows the file is ready to wrtire and works perfectly
+    //TODO; Outcome shows the file is ready to writer and works perfectly
     @Test
     void testWriterGeneralFoodList() {
         try {
