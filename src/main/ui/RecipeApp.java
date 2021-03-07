@@ -2,8 +2,8 @@ package ui;
 
 import model.Food;
 import model.FoodList;
-import model.JsonReader;
-import model.JsonWriter;
+import persistence.JsonReader;
+import persistence.JsonWriter;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
