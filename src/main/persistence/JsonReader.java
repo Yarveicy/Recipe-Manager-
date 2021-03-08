@@ -43,7 +43,7 @@ public class JsonReader {
         return contentBuilder.toString();
     }
 
-    // EFFECTS: parses foodlist from JSON object and returns it
+    // EFFECTS: parses foodlist from JSON object and returns foodlist
     private FoodList parseFoodlist(JSONObject jsonObject) {
         JSONArray newOne = jsonObject.getJSONArray("foodlist");
         FoodList newTwo = new FoodList();
@@ -51,28 +51,28 @@ public class JsonReader {
         return newTwo;
     }
 
-    // MODIFIES: f and m
+    // MODIFIES: foodlist
     // EFFECTS: parses food from JSON object and adds them to foodlist
-    private void addFoods(FoodList f, JSONArray m) {
+    private void addFoods(FoodList foodList, JSONArray m) {
 
         for (Object json : m) {
             JSONObject nextFood = (JSONObject) json;
-            addFood(f, nextFood);
+            addFood(foodList, nextFood);
         }
     }
 
-    // MODIFIES: m and n
+    // MODIFIES: foodList
     // EFFECTS: parses title,time required to cook, ingredients,
     // coking instruction and recipe rating-(parses newRecipe from JSON object)
     // from JSON object and adds it to foodlist
-    private void addFood(FoodList m, JSONObject n) {
-        String title = n.getString("title");
-        int time = n.getInt("time");
-        String ingredients = n.getString("ingredients");
-        String cookingInstruction = n.getString("cookingInstruction");
-        int stars = n.getInt("stars");
+    private void addFood(FoodList foodList, JSONObject food) {
+        String title = food.getString("title");
+        int time = food.getInt("time");
+        String ingredients = food.getString("ingredients");
+        String cookingInstruction = food.getString("cookingInstruction");
+        int stars = food.getInt("stars");
         Food newRecipe = new Food(title, time, ingredients, cookingInstruction, stars);
-        m.addFood(newRecipe);
+        foodList.addFood(newRecipe);
 
 
     }

@@ -68,7 +68,7 @@ public class Food {
 
 
     /*
-     * Modifies: this
+     * Modifies Json
      * EFFECTS: converts  title,time required to cook, ingredients, coking instruction and recipe rating
      * to a JsonObject-(return Json object)- to help us save the data with the help of value pairs.
      */
