@@ -15,6 +15,17 @@ public class Food {
     private String cookingInstruction;      // Cooking instruction
     private int stars;                      // Recipe rating
 
+    @Override
+    public String toString() {
+        return "Food{" +
+                "title='" + title + '\'' +
+                ", id=" + id +
+                ", time=" + time +
+                ", ingredients='" + ingredients + '\'' +
+                ", cookingInstruction='" + cookingInstruction + '\'' +
+                ", stars=" + stars +
+                '}';
+    }
     /*
      * REQUIRES: food title,ingredients,cookingInstruction have a non-zero length and time>0 min,and stars .
      *
