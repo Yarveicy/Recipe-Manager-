@@ -18,18 +18,10 @@ public class ButtonAddRecipe extends JFrame implements ActionListener {
     private static final String JSON_STORE = "./data/workroom.json";
     private FoodList foodList = new FoodList();
     JTextArea textArea = new JTextArea(20, 20);
-
-    //private JsonWriter jsonWriter;
     JsonWriter jsonWriter = new JsonWriter(JSON_STORE);
-    //private JsonReader jsonReader;
     JsonReader jsonReader = new JsonReader(JSON_STORE);
-    // foodList = new FoodList();
 
-    JTextField viewRecipeDetails;
-    JTextField exit;
-    JTextField load;
-    JTextField save;
-    //button name
+
 
     JButton buttonAddRecipe = new JButton();
     JButton buttonViewAllRecipe = new JButton();
@@ -43,6 +35,8 @@ public class ButtonAddRecipe extends JFrame implements ActionListener {
 
 
     ButtonAddRecipe() {
+
+
 
 
         // Sets JTextArea font and color.
@@ -108,9 +102,9 @@ public class ButtonAddRecipe extends JFrame implements ActionListener {
         buttonSave.addActionListener(this);
 
 
-        exit = new JTextField();
-        load = new JTextField();
-        save = new JTextField();
+        //exit = new JTextField();
+        //load = new JTextField();
+       // save = new JTextField();
 
 
         //Button position
@@ -195,7 +189,7 @@ public class ButtonAddRecipe extends JFrame implements ActionListener {
         if (e.getSource() == buttonLoad) {
 
 
-            System.out.println("You prsesed load" + load.getText());
+            System.out.println("You prsesed load" );
 
             try {
                 foodList = jsonReader.read();
@@ -205,7 +199,7 @@ public class ButtonAddRecipe extends JFrame implements ActionListener {
             }
 
 
-            textArea.setText(load.getText());
+            //textArea.setText(load.getText());
 
 
         }

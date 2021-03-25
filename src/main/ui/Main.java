@@ -12,10 +12,13 @@ public class Main {
         //  new RecipeApp();
 
 
-        new ButtonAddRecipe();
+       //new ButtonAddRecipe();
+        new ButtonAddRecipesss();
+
+        //new GridBagLayoutDemo();
+        //new createAndShowGUI()
+
+        //new NewPractice();
 
 
-    }
-
-
-}
+    }}
