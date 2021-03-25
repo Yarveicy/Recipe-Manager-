@@ -147,6 +147,8 @@ public class ButtonAddRecipesss extends JFrame implements ActionListener {
         if (e.getSource() == buttonExit) {
 
             System.out.println(" You press Exit ");
+            System.exit(0);
+
 
 
         }
