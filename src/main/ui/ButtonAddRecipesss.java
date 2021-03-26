@@ -14,8 +14,7 @@ import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.net.URL;
-//import java.net.URL;
+
 
 public class ButtonAddRecipesss extends JFrame implements ActionListener {
 
@@ -35,8 +34,6 @@ public class ButtonAddRecipesss extends JFrame implements ActionListener {
     JButton buttonSave = new JButton("Save");
 
 
-    //    AudioClip click;
-    //AudioClip click;
 
     File wavFile = new File("./data/DanceMonkey.wav");
     AudioClip sound;
@@ -67,6 +64,16 @@ public class ButtonAddRecipesss extends JFrame implements ActionListener {
         buttonLoad.addActionListener(this);
         buttonSave.addActionListener(this);
 //////////////////////////////////////////////////
+        resultFrame();
+
+
+/////////////////////////////////////////////////
+        showInputFoodRecipe();
+
+
+    }
+
+    private void resultFrame() {
         JFrame frame2 = new JFrame("Result CPSC 210");
         frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame2.setSize(400, 400);
@@ -75,12 +82,6 @@ public class ButtonAddRecipesss extends JFrame implements ActionListener {
         Font font = new Font("Segoe Script", Font.BOLD, 20);
         textArea.setFont(font);
         frame2.setVisible(true);
-
-
-/////////////////////////////////////////////////
-        showInputFoodRecipe();
-
-
     }
 
 
