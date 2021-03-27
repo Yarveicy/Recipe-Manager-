@@ -3,6 +3,7 @@ package model;
 import org.json.JSONObject;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 
@@ -83,7 +84,6 @@ public class FoodTest {
     }
 
 
-
     //TODO: Test setstars
     //TODO; Outcome shows rating for food
     @Test
@@ -101,6 +101,17 @@ public class FoodTest {
 
     }
 
+    //TODO: Test toString
+    //TODO; Outcome shows the toString works properly
+    @Test
+    void testtoString() {
+
+        assertFalse(testFood.toString().isEmpty());
+        assertEquals(testFood.getTitle().toString(),"Simple Pizza");
+
+
+
+    }
 
 
 }

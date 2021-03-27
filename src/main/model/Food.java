@@ -15,6 +15,11 @@ public class Food {
     private String cookingInstruction;      // Cooking instruction
     private int stars;                      // Recipe rating
 
+
+
+    //Modify; this
+    //Effect: convert food object to string to help us show the results in the string format
+
     @Override
     public String toString() {
         return "Food{"
