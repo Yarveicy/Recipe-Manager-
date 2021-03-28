@@ -1,6 +1,8 @@
 package ui;
 
 
+//This class will help us run the application
+
 //Instantiate of ButtonAddRecipe
 
 public class Main {
