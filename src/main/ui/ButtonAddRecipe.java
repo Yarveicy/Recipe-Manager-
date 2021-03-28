@@ -38,8 +38,7 @@ public class ButtonAddRecipe extends JFrame implements ActionListener {
     AudioClip sound;
 
 
-    // REQUIRES: food title,ingredients,cookingInstruction have a non-zero length and time>0 min and stars are positive
-    // integers.
+
     // Modify: this
     // Effect: Constructor for new ButtonAddRecipe object which creates buttons in frames and make them visible to users
     // and users can interact with buttons with program
