@@ -318,7 +318,7 @@ public class ButtonAddRecipe extends JFrame implements ActionListener {
         }
     }
 
-    // REQUIRES: food title,ingredients,cookingInstruction have a non-zero length and time>0 min,and star is positive
+    // REQUIRES: food title,ingredients,cookingInstruction have a non-zero length and time>0 min and star is positive
     // Modify: this
     // Effect: if Ok button is clicked all the input related to food such as title,ingredients,cookingInstruction
     // time>0 min,and stars will creat foo object and then add to the food list
