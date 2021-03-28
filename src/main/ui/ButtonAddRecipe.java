@@ -15,6 +15,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+//CITATION: I got an idea from examples available with Oracle,net and Edex.
+
 //ButtonAddRecipe class which Represent buttons that help us to save,load,add food recipe,
 // show recipe details and clos the application using frames and actions with click
 
@@ -39,7 +41,7 @@ public class ButtonAddRecipe extends JFrame implements ActionListener {
     // REQUIRES: food title,ingredients,cookingInstruction have a non-zero length and time>0 min and stars are positive
     // integers.
     // Modify: this
-    // Effect: Constructor for new ButtonAddRecipe which creates buttons in frames and make them visible to users
+    // Effect: Constructor for new ButtonAddRecipe object which creates buttons in frames and make them visible to users
     // and users can interact with buttons with program
     ButtonAddRecipe() {
 
@@ -90,8 +92,6 @@ public class ButtonAddRecipe extends JFrame implements ActionListener {
         frame2.setVisible(true);
     }
 
-    // REQUIRES: food title,ingredients,cookingInstruction have a non-zero length string and time>0 min,and star is
-    // positive integer
     // Modify: this
     // Effect: Create input panel for adding the one food details to food recipe- food having an title,
     // time required to cook, ingredients, coking instruction and recipe rating-
@@ -153,7 +153,7 @@ public class ButtonAddRecipe extends JFrame implements ActionListener {
 
     //Modify: this
     //Effect: Each button provide the different tasks such as show,load,save,exit and load recipe based on the
-    //user actions
+    //user actions. Which help us to relate the program and the order of the user.
 
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -282,8 +282,7 @@ public class ButtonAddRecipe extends JFrame implements ActionListener {
         }
     }
 
-    // REQUIRES: food title,ingredients,cookingInstruction have a non-zero length and string  and time>0 min,and star is
-    // positive integer
+
     // Modify: this
     // Effect: Create input panel for adding the one food details to food recipe- food having an title,
     // time required to cook, ingredients, coking instruction and recipe rating
