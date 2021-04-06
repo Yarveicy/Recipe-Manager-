@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 
-//Represent a test for Food Class
+//Represent a test for Food Class//
 
 public class FoodTest {
 

@@ -53,6 +53,8 @@ enjoy different foods.</p>
 <p> I will define more subclass based on abstract classs for other buttons</p>
 <p> I will read other design books related to java to improve the design of my application</p>
 <p> I will reduce duplication in ButtonAddRecipe by creating super class</p>
+<p> I will use ButtonTerm asbtract class to reduce duplication in ButtonAddRecipe Class to reduce duplication 
+and coupling</p>
 
 
 
