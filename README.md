@@ -39,6 +39,26 @@ enjoy different foods.</p>
 <p>As a user, <strong> I want to be able</strong> to to save my food recipe to file.</p>
 <p>As a user, <strong> I want to be able</strong> to load my food recipe from file </p>
 
+<h3><strong><em>"Phase 4: Task 2" </em></strong></h3>
+<p> I chose the second option- A type hierarchy- </p>
+<p> ButtonTerm-ButtonExiting-ButtonShowReciping </p>
+
+
+<h3><strong><em>"Phase 4: Task 3" </em></strong></h3>
+<p>  Reflect on the design presented in your UML class diagram. </p>
+
+<p> is there any refactoring that you would do to improve your design? </p>
+
+<p> Yes, every program can be designed better based on programmer experience. </p>
+<p> I will define more subclass based on abstract classs for other buttons</p>
+<p> I will read other design books related to java to improve the design of my application</p>
+<p> I will reduce duplication in ButtonAddRecipe by creating super class</p>
+
+
+
+
+
+
 
 
 An example of text with **bold** and *italic* fonts.  Note that the IntelliJ markdown previewer doesn't seem to render 

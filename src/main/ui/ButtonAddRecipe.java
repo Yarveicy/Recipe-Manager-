@@ -27,6 +27,10 @@ public class ButtonAddRecipe extends JFrame implements ActionListener {
     private FoodList foodList = new FoodList();// create foodlist object
     JsonWriter jsonWriter = new JsonWriter(JSON_STORE);
     JsonReader jsonReader = new JsonReader(JSON_STORE);
+
+    //ButtonExiting be = new ButtonExiting();
+
+
     JTextArea textArea = new JTextArea(20, 20);//Represent the text Area for showing result
     JButton buttonAddRecipe = new JButton("AddRecipe");//Represent the new Button object
     JButton buttonViewAllRecipe = new JButton("ViewAllRecipe");//Represent the new Button object
@@ -36,7 +40,6 @@ public class ButtonAddRecipe extends JFrame implements ActionListener {
     JButton buttonSave = new JButton("Save");//Represent the new Button object
     File wavFile = new File("./data/DanceMonkey.wav");//Represent the location of the audio file
     AudioClip sound;
-
 
 
     // Modify: this
@@ -157,7 +160,9 @@ public class ButtonAddRecipe extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         //Refactor Method Based on the discussion in Friday office hour, I explained the details of the method below
-        showRecipe(e);
+        // showRecipe(e);//
+
+
         //Refactor Method Based on the discussion in Friday office hour, I explained the details of the method below
         showMethoidButtonAdd(e);
         //Refactor Method Based on the discussion in Friday office hour, I explained the details of the method below
@@ -166,23 +171,18 @@ public class ButtonAddRecipe extends JFrame implements ActionListener {
         showButonSave(e);
         //Refactor Method Based on the discussion in Friday office hour, I explained the details of the method below
         showButtonLoad(e);
+
+
         //Refactor Method Based on the discussion in Friday office hour, I explained the details of the method below
-        showButtonExit(e);
-
-    }
-
-
-    //Modify: this
-    //Effect: Once the exit button clicked the application is closed by the system
-
-    private void showButtonExit(ActionEvent e) {
-        if (e.getSource() == buttonExit) {
-
-            System.out.println(" You press Exit ");
-            System.exit(0);
+        // showButtonExit(e);//
+        ButtonExiting be = new ButtonExiting(buttonExit);
+        be.buttonClickHandler(e);
 
 
-        }
+        ButtonShowReciping me = new ButtonShowReciping(foodList, textArea, buttonViewAllRecipe);
+
+        me.buttonClickHandler(e);
+
     }
 
 
@@ -335,26 +335,6 @@ public class ButtonAddRecipe extends JFrame implements ActionListener {
             Food newRecipe = new Food(titleString, timesNum, ingredientString, cookingInstructionString, starsNum);
             foodList.addFood(newRecipe);
             textArea.setText(foodList.getFoodList().toString());
-
-
-        }
-    }
-
-
-    //Modify: this
-    //Effect: Once the view all recipe clicked, the application will show all food recipe which are available
-
-    private void showRecipe(ActionEvent e) {
-        if (e.getSource() == buttonViewAllRecipe) {
-            textArea.setText("");
-
-
-            for (int i = 0; i < foodList.getFoodList().size(); i++) {
-
-                textArea.append(foodList.getFoodList().get(i).toString() + "\n");
-
-
-            }
 
 
         }

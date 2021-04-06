@@ -16,7 +16,6 @@ public class Food {
     private int stars;                      // Recipe rating
 
 
-
     //Modify; this
     //Effect: convert food object to string to help us show the results in the string format
 
@@ -69,13 +68,19 @@ public class Food {
 
     public int getStars() {
 
+
         return stars;
     }
 
-    public void setStars(int stars) {
+
+
+
+    public void setStars(int stars)  {
+
 
         this.stars = stars;
     }
+
 
 
     /*

@@ -70,7 +70,10 @@ public class RecipeApp {
         }
     }
 
-
+    //Modify: Food and Foodlist
+    //Require :food title,ingredients,cookingInstruction have a non-zero length and time>0 min,and stars between 1-10
+    //food list have a non-zero length
+    // EFFECTS: runs the recipe application based on USER INPUT
     private void runAppsss(int option) throws Exception {
 
 
