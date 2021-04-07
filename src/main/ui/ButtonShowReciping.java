@@ -7,7 +7,7 @@ import java.awt.event.ActionEvent;
 
 
 //ButtonShowReciping class which Represent buttons that help us to show Recipe by clicking on the Show Recipe button
-//which extends ButtonTerm//
+//which extends ButtonTerm/
 public class ButtonShowReciping extends ButtonTerm  {
 
 
