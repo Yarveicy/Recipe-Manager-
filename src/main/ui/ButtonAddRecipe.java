@@ -15,7 +15,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-//CITATION: I got an idea from examples available with Oracle,net and Edex.
+//CITATION: I got an idea from examples available with Oracle,net and Edex.//
 
 //ButtonAddRecipe class which Represent buttons that help us to save,load,add food recipe,
 // show recipe details and clos the application using frames and actions with click

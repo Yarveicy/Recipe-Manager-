@@ -54,6 +54,7 @@ enjoy different foods.</p>
 <p> I can use button term to create more button like load, save and details which helps less duplication in 
 ButtonAddRecipe class and less coupling. This will help future programmer to work on the program more easily.</p>
 <p> I will read other design books related to java to improve the design of my application</p>
+<p>I will apply the design pattern which improve the cohesion and increase the maintainability of the program</p>
 <p> I will reduce duplication in ButtonAddRecipe by creating super class with the help of idea</p>
 <p> For example, showInputFoodRecipe can be used to create a supercalss.</p>
 <p> I will use ButtonTerm asbtract class to reduce duplication in ButtonAddRecipe Class to reduce duplication 
